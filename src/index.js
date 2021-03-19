@@ -1,17 +1,24 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from 'react'
+import { render } from 'react-dom'
+import './index.css'
+import { BrowserRouter, Switch, Route} from 'react-router-dom'
+import Landing from './views/Landing'
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+const App = () => {
+    return(
+        <div>
+            <style>
+                @import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=B612+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Cutive+Mono&family=JetBrains+Mono&family=Share+Tech+Mono&family=Source+Code+Pro&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+            </style>
+            <BrowserRouter>
+                <Switch>
+                    <Landing/>
+                </Switch>
+            </BrowserRouter>
+            <Landing/>
+        </div>
+    )
+}
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const root = document.getElementById('root')
+render(<App />, root)
