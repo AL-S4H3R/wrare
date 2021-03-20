@@ -3,6 +3,7 @@ import { render } from 'react-dom'
 import './index.css'
 import { BrowserRouter, Switch, Route} from 'react-router-dom'
 import Landing from './views/Landing'
+import ConnectPage from './views/Connect'
 
 const App = () => {
     return(
@@ -12,10 +13,10 @@ const App = () => {
             </style>
             <BrowserRouter>
                 <Switch>
-                    <Landing/>
+                    <Route exact path='/' component={Landing} />
+                    <Route path='/connect' component={ConnectPage} />
                 </Switch>
             </BrowserRouter>
-            <Landing/>
         </div>
     )
 }
