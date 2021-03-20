@@ -4,6 +4,7 @@ import './index.css'
 import { BrowserRouter, Switch, Route} from 'react-router-dom'
 import Landing from './views/Landing'
 import ConnectPage from './views/Connect'
+import CreateToken from './views/CreateToken'
 
 const App = () => {
     return(
@@ -15,6 +16,7 @@ const App = () => {
                 <Switch>
                     <Route exact path='/' component={Landing} />
                     <Route path='/connect' component={ConnectPage} />
+                    <Route path='/create' component={CreateToken} />
                 </Switch>
             </BrowserRouter>
         </div>

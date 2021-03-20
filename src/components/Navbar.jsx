@@ -12,7 +12,7 @@ const Navbar = () => {
                     <a href="/">My Account</a>
                 </p>
                 <p className="tracking-tighter border-2 border-black px-2 py-1 text-gray-800">
-                    <a href="/">Create ART</a>
+                    <a href="/create">Create ART</a>
                 </p>
             </div>
         </nav>
